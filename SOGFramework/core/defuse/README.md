@@ -18,7 +18,7 @@ _The module can also trigger mission complete or mission fail._
 Arguments:
   0: OBJECT - The IED object
   1: STRING - The ID of the task
-  2: NUMBER - The Countdown Timer
+  2: SCALAR - The Countdown Timer
 
 Example:
   [this, "task_name", 30] spawn SOG_defuse_fnc_makeIED
@@ -40,8 +40,8 @@ Example:
 ```
 Arguments:
   0: STRING - ID of the task
-  1: NUMBER - Number of objects destroyed to fail the task
-  2: NUMBER - Number of ieds to defuse to complete the task
+  1: SCALAR - Number of objects destroyed to fail the task
+  2: SCALAR - Number of ieds to defuse to complete the task
   3: BOOLEAN - Should the mission end (MissionSuccess) if the task is successful (Optional, default: false)
   4: BOOLEAN - Should the mission end (MissionFailed) if the task is failed (Optional, default: false)
 

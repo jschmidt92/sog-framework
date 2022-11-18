@@ -27,11 +27,11 @@ Example:
 ```
 Arguments:
   0: STRING - ID of the task
-  1: NUMBER - Number of targets escaped to fail the task
-  2: NUMBER - Number of targets eliminated to complete the task
+  1: SCALAR - Number of targets escaped to fail the task
+  2: SCALAR - Number of targets eliminated to complete the task
   3: BOOLEAN - Should the mission end (MissionSuccess) if the task is successful (Optional, default: false)
   4: BOOLEAN - Should the mission end (MissionFailed) if the task is failed (Optional, default: false)
-  5: TIME - Number of seconds before targets escape (Optional)
+  5: SCALAR - Number of seconds before targets escape (Optional)
 
 Example:
   // Default No Time Limit

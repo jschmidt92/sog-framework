@@ -29,12 +29,12 @@ Example:
 Arguments:
   0: STRING - ID of the task
   1: STRING - Marker name for the extraction zone
-  2: NUMBER - Number of hvts KIA or escaped to fail the task
-  3: NUMBER - Number of captured or eliminated hvts to complete the task
+  2: SCALAR - Number of hvts KIA or escaped to fail the task
+  3: SCALAR - Number of captured or eliminated hvts to complete the task
   4: BOOLEAN - Should the mission end (MissionSuccess) if the task is successful (Optional, default: false)
   5: BOOLEAN - Should the mission end (MissionFailed) if the task is failed (Optional, default: false)
   6: ARRAY - Array of task types to select from (Optional, default: [true, false])
-  7: TIME - Number of seconds before hvts escape (Optional)
+  7: SCALAR - Number of seconds before hvts escape (Optional)
 
 Example:
   // Capture No Time Limit

@@ -41,12 +41,12 @@ Example:
 Arguments:
   0: STRING - ID of the task
   1: STRING - Marker name for the extraction zone
-  2: NUMBER - Number of hostages KIA to fail the task
-  3: NUMBER - Number of hostages rescued to complete the task
+  2: SCALAR - Number of hostages KIA to fail the task
+  3: SCALAR - Number of hostages rescued to complete the task
   4: BOOLEAN - Should the mission end (MissionSuccess) if the task is successful (Optional, default: false)
   5: BOOLEAN - Should the mission end (MissionFailed) if the task is failed (Optional, default: false)
   6: ARRAY - Array of task types to select from (Optional, default: [false, false])
-  7: TIME - Number of seconds before hostages are killed (Optional)
+  7: SCALAR - Number of seconds before hostages are killed (Optional)
   8: STRING - Marker name for the cbrn zone
 
 Example:
