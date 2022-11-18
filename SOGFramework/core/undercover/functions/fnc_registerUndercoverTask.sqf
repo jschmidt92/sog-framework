@@ -59,6 +59,6 @@ params [["_taskID", ""], ["_limitFail", -1], ["_limitSuccess", -1], ["_endSucces
 		_this#1 params ["_handle"];
 
 		// Check function
-		[_handle, _undercover, _taskID, _limitFail, _limitSuccess, _endSuccess, _endFail, _timeLimit, _time] spawn FUNC(checkTaskConditions);
-	}, 3, [_undercover, _taskID, _limitFail, _limitSuccess, _endSuccess, _endFail, _timeLimit, _time]] spawn CFUNC(addPerFrameHandler);
-}, [_taskID, _limitFail, _limitSuccess, _endSuccess, _endFail, _timeLimit, _time]] spawn CFUNC(addEventHandlerArgs);
+		[_handle, _undercover, _taskID, _limitFail, _limitSuccess, _endSuccess, _endFail, _timeLimit, _time] call FUNC(checkTaskConditions);
+	}, 3, [_undercover, _taskID, _limitFail, _limitSuccess, _endSuccess, _endFail, _timeLimit, _time]] call CFUNC(addPerFrameHandler);
+}, [_taskID, _limitFail, _limitSuccess, _endSuccess, _endFail, _timeLimit, _time]] call CFUNC(addEventHandlerArgs);
