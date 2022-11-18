@@ -1,0 +1,55 @@
+// DO NOT EDIT (unless you know what you are doing)
+// To access the basic settings open the description.hpp in 'SOGFramework\config\'
+
+#include "SOGFramework\core\main\script_macros.hpp"
+
+// Importing the custom settings
+#include "SOGFramework\config\description.hpp"
+__EXEC(MF_missionMaker = UID;)
+
+// Respawn settings
+respawn = "BASE";  // Respawn type
+respawnDelay = 30;  // Respawn delay in seconds (this is overwritten by the framework)
+respawnVehicleDelay = 60;  // Vehicle respawn delay in seconds (use the Vehicle respawn module instead)
+respawnDialog = 0;  // Displays the respawn dialog
+respawnButton = 1;  // If the Respawn button is enabled in the Esc menu
+respawnOnStart = -1;  // Respawn script at mission start
+
+// Mission settings
+cba_settings_hasSettingsFile = 1;  // Enable CBA settings file
+cba_settings_whitelist[] = {UID};  // Enable the CBA server settings for the mission maker + logged in admin or host
+disableChannels[] = {0, 2, 4, 5};  // Disable certain comms channels
+disabledAI = 1;  // Enable/disable AI in player slots
+enableDebugConsole[] = {UID};  // Enable the debug console for the mission maker + logged in admin or host
+enableTargetDebug = 1;  // Target debugging
+
+// Garbage collector settings
+corpseManagerMode = 1;
+corpseLimit = 30;
+corpseRemovalMinTime = 300;
+corpseRemovalMaxTime = 600;
+
+wreckManagerMode = 1;
+wreckLimit = 15;
+wreckRemovalMinTime = 600;
+wreckRemovalMaxTime = 900;
+
+// Tasks
+taskManagement_markers2D = 0;  // Use 2D markers
+taskManagement_markers3D = 0;  // Use 3D markers
+taskManagement_propagate = 0;  // Propagate shared tasks to subordinates
+
+// Debriefing config
+#include "SOGFramework\core\main\CfgDebriefing.hpp"
+
+// Notifications config
+#include "SOGFramework\core\main\CfgNotifications.hpp"
+
+// CBA Event handlers
+#include "SOGFramework\core\main\CfgEventHandlers.hpp"
+
+// Custom sounds
+#include "SOGFramework\core\main\CfgSounds.hpp"
+
+// RscTitles
+#include "SOGFramework\core\main\RscTitles.hpp"
