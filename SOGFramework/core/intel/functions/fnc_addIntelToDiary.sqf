@@ -1,24 +1,23 @@
 #include "script_component.hpp"
 
 /*
-	Author:
-	Kex (modified by Malbryn)
-
-	Description:
-	Adds a "Mission Intel" diary record to the player's diary.
-
-	Arguments:
-	0: STRING - Title of the intel
-	1: STRING - Intel text
-	2: STRING - Name of the player who found the intel
-	3: BOOLEAN - If the intel was shared globally
-
-	Example:
-	["Test title", "Test text", name player, true] call MF_intel_fnc_addIntelToDiary
-
-	Returns:
-	void
-*/
+ * Author: Kex, Malbryn
+ * Adds a "Mission Intel" diary record to the player's diary.
+ *
+ * Arguments:
+ * 0: Title of the intel <STRING>
+ * 1: Intel text <STRING>
+ * 2: Name of the player who found the intel <STRING>
+ * 3: If the intel was shared globally <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * ["Test title", "Test text", name player, true] call MF_intel_fnc_addIntelToDiary
+ *
+ * Public: No
+ */
 
 if !(hasInterface) exitWith {};
 

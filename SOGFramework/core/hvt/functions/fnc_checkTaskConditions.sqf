@@ -22,7 +22,7 @@
 
 	Example:
 	// Capture No Time Limit
-	[1, [hvt1, hvt2], "t1", "mrk_extraction", 1, 2, false, false, [true, false]] call MF_hvt_fnc_checkTaskConditions
+	[1, [hvt1, hvt2], "t1", "mrk_extraction", 1, 2, false, false, [true, false]] call SOG_hvt_fnc_checkTaskConditions
 
 	Returns:
 	void

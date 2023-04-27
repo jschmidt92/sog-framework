@@ -21,13 +21,13 @@
 
 	Example:
 	// Default No Time Limit
-	["task_name", "marker_name", 1, 2, false] call MF_hostage_fnc_registerHostageTask
+	["task_name", "marker_name", 1, 2, false] call SOG_hostage_fnc_registerHostageTask
 
 	// CBRN Attack When Time Limit Expires
-	["task_name", "marker_name", 1, 2, false, false, [true, false], 45, "marker_name"] call MF_hostage_fnc_registerHostageTask
+	["task_name", "marker_name", 1, 2, false, false, [true, false], 45, "marker_name"] call SOG_hostage_fnc_registerHostageTask
 
 	// Execution When Time Limit Expires
-	["task_name", "marker_name", 1, 2, false, false, [false, true], 45] call MF_hostage_fnc_registerHostageTask
+	["task_name", "marker_name", 1, 2, false, false, [false, true], 45] call SOG_hostage_fnc_registerHostageTask
 
 	Returns:
 	void
@@ -105,6 +105,6 @@ if (!isNil "_time") then {
 
 			// Check function
 			[_handle, _hostages, _shooters, _taskID, _extZone, _limitFail, _limitSuccess, _endSuccess, _endFail] call FUNC(checkTaskConditions);
-		}, 3, [_hostages, _shooters, _taskID, _extZone, _limitFail, _limitSuccess, _endSuccess, _endFail]] call CFUNC(addPerFrameHandler);
+		}, 60, [_hostages, _shooters, _taskID, _extZone, _limitFail, _limitSuccess, _endSuccess, _endFail]] call CFUNC(addPerFrameHandler);
 	}, [_taskID, _extZone, _limitFail, _limitSuccess, _endSuccess, _endFail]] call CFUNC(addEventHandlerArgs);
 };

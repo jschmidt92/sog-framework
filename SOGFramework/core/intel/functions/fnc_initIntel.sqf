@@ -1,42 +1,41 @@
 #include "script_component.hpp"
 
 /*
-	Author:
-	Malbryn
-
-	Description:
-	Adds a "Search for intel" option to an intel object.
-
-	Arguments:
-	0: OBJECT - Intel object
-	1: SCALAR - ID of the intel (see intel.sqf in config)
-	2: STRING - Pick-up action display text (Optional, default: "Search for intel")
-	3: STRING - Hold action icons (Optional, default: "holdAction_search_ca")
-
-	Available icons:
-	- holdAction_connect_ca.paa
-	- holdAction_forceRespawn_ca.paa
-	- holdAction_hack_ca.paa
-	- holdAction_loadDevice_ca.paa
-	- holdAction_passLeadership_ca.paa
-	- holdAction_requestLeadership_ca.paa
-	- holdAction_revive_ca.paa
-	- holdAction_reviveMedic_ca.paa
-	- holdAction_search_ca.paa
-	- holdAction_secure_ca.paa
-	- holdAction_takeOff1_ca.paa
-	- holdAction_takeOff2_ca.paa
-	- holdAction_thumbsDown_ca.paa
-	- holdAction_thumbsUp_ca.paa
-	- holdAction_unbind_ca.paa
-	- holdAction_unloadDevice_ca.paa
-
-	Example:
-	[this, 2, "Hack laptop", "holdAction_hack_ca"] call MF_intel_fnc_initIntel
-
-	Returns:
-	void
-*/
+ * Author: Malbryn
+ * Adds a "Search for intel" option to an intel object.
+ *
+ * Arguments:
+ * 0: Intel object <OBJECT>
+ * 1: ID of the intel (see intel.sqf in config) <NUMBER>
+ * 2: Pick-up action display text <STRING> (default: "Search For Intel")
+ * 3: Hold action icons <STRING> (default: "holdAction_search_ca")
+ *
+ * Available icons:
+ * - holdAction_connect_ca.paa
+ * - holdAction_forceRespawn_ca.paa
+ * - holdAction_hack_ca.paa
+ * - holdAction_loadDevice_ca.paa
+ * - holdAction_passLeadership_ca.paa
+ * - holdAction_requestLeadership_ca.paa
+ * - holdAction_revive_ca.paa
+ * - holdAction_reviveMedic_ca.paa
+ * - holdAction_search_ca.paa
+ * - holdAction_secure_ca.paa
+ * - holdAction_takeOff1_ca.paa
+ * - holdAction_takeOff2_ca.paa
+ * - holdAction_thumbsDown_ca.paa
+ * - holdAction_thumbsUp_ca.paa
+ * - holdAction_unbind_ca.paa
+ * - holdAction_unloadDevice_ca.paa
+ *
+ * Return Value:
+ * None
+ * 
+ * Example:
+ * [this, 2, "Hack Laptop", "holdAction_hack_ca"] call MF_intel_fnc_initIntel
+ *
+ * Public: Yes
+ */
 
 if !(hasInterface) exitWith {};
 
@@ -63,7 +62,9 @@ missionNamespace setVariable [_intelID, false, true];
 	_iconPath,
 	"_this distance _target < 4",
 	"_caller distance _target < 4",
-	{},
+	{
+		// Implement Animation Loop Script ** TO DO **
+	},
 	{},
 	{
 		params ["_object", "_finder", "_ID", "_arguments"];
@@ -81,8 +82,12 @@ missionNamespace setVariable [_intelID, false, true];
 		missionNamespace setVariable [_intelID, true, true];
 
 		if (_delete) then { deleteVehicle _object };
+
+		// Implement Animation Loop Script ** TO DO **
 	},
-	{},
+	{
+		// Implement Animation Loop Script ** TO DO **
+	},
 	[_title, _text, _delete, _share, _intelID],
 	_duration,
 	20,

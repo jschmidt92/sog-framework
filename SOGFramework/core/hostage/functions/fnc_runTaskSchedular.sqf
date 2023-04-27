@@ -24,9 +24,9 @@
 
 	Example:
 	// Default CBRN
-	[[pow1, pow2], "t1", "mrk_extraction", 1, 2, false, false, [true, false], 45, "mrk_cbrn"] call MF_hostage_fnc_checkTaskConditions
+	[[pow1, pow2], "t1", "mrk_extraction", 1, 2, false, false, [true, false], 45, "mrk_cbrn"] call SOG_hostage_fnc_checkTaskConditions
 	// Default Hostage
-	[[pow1, pow2], "t1", "mrk_extraction", 1, 2, false, false, [false, true], 45] call MF_hostage_fnc_checkTaskConditions
+	[[pow1, pow2], "t1", "mrk_extraction", 1, 2, false, false, [false, true], 45] call SOG_hostage_fnc_checkTaskConditions
 
 	Returns:
 	void

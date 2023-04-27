@@ -21,9 +21,9 @@
 
 	Example:
 	// Default Capture
-	[[hvt1, hvt2], "t1", "mrk_extraction", 1, 2, false, false, [true, false], 45] call MF_hvt_fnc_checkTaskConditions
+	[[hvt1, hvt2], "t1", "mrk_extraction", 1, 2, false, false, [true, false], 45] call SOG_hvt_fnc_checkTaskConditions
 	// Default Eliminate
-	[[hvt1, hvt2], "t1", "mrk_extraction", 1, 2, false, false, [false, true], 45] call MF_hvt_fnc_checkTaskConditions
+	[[hvt1, hvt2], "t1", "mrk_extraction", 1, 2, false, false, [false, true], 45] call SOG_hvt_fnc_checkTaskConditions
 
 	Returns:
 	void
